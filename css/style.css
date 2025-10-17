@@ -33,7 +33,7 @@ main {
   flex-direction: column;
   gap: 1rem;
 }
-@media (min-with: 767px) {
+@media (max-with: 1081px) {
 * {
   box-sizing: border-box;
   margin: 0;
