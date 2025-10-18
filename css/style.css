@@ -128,28 +128,157 @@ footer a {
 }
 
 
-@media (min-width: 768px) {
-  .images {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
+@media (min-width: 768px) and (max-width: 1023px) {
+.main {
+    display: grid;
+    margin-top: 0;
+    grid-template-columns: 1fr 1fr;
+     grid-template-areas: 
+    "header general"
+    "images images"
+    "images images"
+    "specifics blank"
+ }
+ body {
+    margin-top: 0;
+ }
+ .images{
+    grid-area: images;
+    display: grid;
+    grid-template-areas: 
+    "image1 image2"
+"image3 image4";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
 
-  .images img {
-    width: calc(50% - 5px); 
-  }
+
+ }
+.about-us {
+    grid-area: header;
+      padding: 2rem;
+      padding-left: 0;
+  margin: 2rem;
+  margin-left: 0;
+ 
+}
+.general-information{
+    grid-area: general;
+    display: block;
+    background-color: #007BFF;  
+    color: white;
+  padding: 2rem;
+  margin: 2rem;
+   margin-top: 0;
+  
+  border-bottom-left-radius: 70px;
+  line-height: 2;
+}
+ #students {
+    grid-area: image1;
+      padding: 1rem;
+  border-radius: 35px;
+} 
+#meeting {
+    grid-area: image2;
+      padding: 1rem;
+  border-radius: 35px;
+}
+#devices {
+    grid-area: image3;
+      padding: 1rem;
+  border-radius: 35px;
+}
+ #screencode {
+    grid-area: image4;
+      padding: 1rem;
+  border-radius: 35px;
+}
+
+.specific-information{
+   grid-area: specifics;
+     padding: 2rem;
+     
+  margin: 2rem;
+  margin-left: 0;
+
 }
 
 
 @media (min-width: 1024px) {
-  .images img {
-    width: calc(25% - 7.5px); 
-  }
+.main {
+    display: grid;
+    margin-top: 0;
+    grid-template-columns: 1fr 1fr;
+     grid-template-areas: 
+    "header general"
+    "header general"
+    "images images"
+    "specifics specifics"
+    "specifics specifics"
+ }
+ body {
+    margin-top: 0;
+ }
+ .images{
+    grid-area: images;
+    display: grid;
+    grid-template-areas: 
+    "image1 image2 image3 image4";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+ 
 
-  .about-us, .general-information, .specific-information {
-    max-width: 1000px;
-    margin: 2rem auto;
-  }
+
+ }
+.about-us {
+    grid-area: header;
+      padding: 2rem;
+      padding-left: 0;
+  margin: 2rem;
+  margin-left: 0;
+ 
+}
+.general-information{
+    grid-area: general;
+    display: block;
+    background-color: #007BFF;  
+    color: white;
+  padding: 2rem;
+  margin: 2rem;
+   margin-top: 0;
+  
+  border-bottom-left-radius: 70px;
+  line-height: 2;
+}
+ #students {
+    grid-area: image1;
+      padding: 1rem;
+  border-radius: 35px;
+} 
+#meeting {
+    grid-area: image2;
+      padding: 1rem;
+  border-radius: 35px;
+}
+#devices {
+    grid-area: image3;
+      padding: 1rem;
+  border-radius: 35px;
+}
+ #screencode {
+    grid-area: image4;
+      padding: 1rem;
+  border-radius: 35px;
+}
+
+.specific-information{
+   grid-area: specifics;
+     padding: 2rem;
+     
+  margin: 2rem;
+  margin-left: 0;
+
+}
+
 }
 
     
