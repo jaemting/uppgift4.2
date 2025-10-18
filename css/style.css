@@ -43,7 +43,7 @@ main {
 body {
   font-family:  Helvetica, Arial, sans-serif;
   line-height: 1.4;
-  font-size: 0.8em;
+  font-size: 1em;
     background-color: white;
   color: black;
   padding: 2%;
@@ -76,6 +76,16 @@ ul li{
 
 .general-information {
   display: none;
+      background-color: #007BFF;  
+        color: #ffffff;
+    text-decoration: none;
+    line-height: 1.4;
+    font-size: 1em;
+    font-weight: none;
+  padding: 2rem;
+  margin: 2rem;
+   margin-top: 0;
+  
 }
 
 .specific-information {
@@ -114,18 +124,16 @@ footer {
   color: white;
   text-align: left;
   padding: 1rem;
-  font-size: 0.9rem;
+  font-size: 1em;
   line-height: 2;
   
 }
 footer a {
     text-decoration: none;
+    color: #ffffff;
 }
 
-footer a {
-  color: #ffffff;
-  text-decoration: underline;
-}
+
 
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -245,19 +253,36 @@ footer a {
     grid-area: general;
     display: block;
     background-color: #007BFF;  
-    color: white;
-  padding: 2rem;
+        color: #ffffff;
+    text-decoration: none;
+    line-height: 1.4;
+    font-size: 0.9em;
+    font-weight: lighter;
+    font-style: normal;
+  padding: 2rem 2rem 2rem 5rem;
   margin: 2rem;
    margin-top: 0;
    border-bottom-left-radius: 70px;
-  line-height: 2;
+  
+}
+.general-information li, p, div {
+  font-size: 0.9em;
+  line-height: 1.4;
+  list-style: none;
+  margin: 0.5rem 0;
+  font-weight: lighter;
+  font-style: normal;
+  padding: 1%;
 }
 .general-information h2{
-    color: black;
+    color: #ffffff;
     text-decoration: none;
+    margin-bottom: 5%;
     line-height: 1.4;
-    font-size: 0.8em;
-    font-weight: normal;
+    font-size: 0.9em;
+    font-weight: lighter;
+    font-style: normal;
+    padding: 1%;
 }
 .specific-information{
    grid-area: specifics;
