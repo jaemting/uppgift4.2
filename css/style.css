@@ -1,10 +1,11 @@
+/*här sätter jag själva grund boxen*/
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 
 }
-
+/*lite grundregler/globala*/
 body {
   font-family:  Helvetica, Arial, sans-serif;
   line-height: 1.4;
@@ -14,13 +15,13 @@ body {
   padding: 2%;
   
 }
-
+/*här difinierar jag hur min lista ska se ut*/
 ul li{
     list-style-type: none;
     padding-left: 5%;
 }
 
-
+/*här definerar jag hur loggan ska sitta*/
 .logotyp {
   width: auto;
   height: 70px;
@@ -29,30 +30,29 @@ ul li{
   left: 5px;
 }
 
+/*här sätter jag min första klass, behövde lite marginaler*/
 .about-us {
-  background-color: white;
-  color: black;
   margin-top: 5rem;
   margin-bottom: 1rem;
 }
+/*samma här, behövde marginal under ribriken*/
 .about-us h1{
     margin-bottom: 3rem;
 }
-
+/*här har jag en klass om inte visas i mobil. har gett den regler fr att kunna visa dem senare.*/
 .general-information {
   display: none;
       background-color: #007BFF;  
         color: #ffffff;
     text-decoration: none;
     line-height: 1.4;
-    font-size: 1em;
-    font-weight: none;
-  padding: 2rem;
+    font-weight: normal;
+    padding: 2rem;
   margin: 2rem;
    margin-top: 0;
   
 }
-
+/*här har jag gett regler för ytterliggare en klass*/
 .specific-information {
   background-color: #99ccff ; 
  
@@ -61,12 +61,12 @@ ul li{
   border-bottom-right-radius: 20px;
   line-height: 2;
 }
-
+/*rubriken i samma klass har fått utseende. */
 .specific-information h2{
     color: blue;
     line-height: 2;
 }
-
+/*satte bilderna i ett flexbox system */
 
 .images {
   display: flex;
@@ -74,7 +74,7 @@ ul li{
 
  
 }
-
+/*och definierade hur de skulle se ut */
 .images img {
   width: 100%;
   height: auto;
@@ -82,15 +82,14 @@ ul li{
   object-fit: cover;
   border: none;
 }
-
+/*satte grundregler för hur sidfoten ska se ut */
 
 footer {
   background-color: #007BFF;
   color: white;
   text-align: left;
   padding: 1rem;
-  font-size: 1em;
-  line-height: 2;
+    line-height: 2;
   
 }
 footer a {
@@ -98,7 +97,8 @@ footer a {
     color: #ffffff;
 }
 
-
+/*min första specifika media query, tablet inom dessa måt får dessa regler. 
+använde mig av dublba css grids eftersom min bilder var inom ytterliggare en DIV tag.*/
 
 
 @media (min-width: 768px) and (max-width: 1023px) {
@@ -112,9 +112,11 @@ footer a {
     "images images"
     "specifics blank"
  }
+ /*behövde justera marginalen längst upp*/
  body {
     margin-top: 0;
  }
+ /*detta var bängligt. först sätter jag vart i mitt "övre" grid denna klass ska sitta, sen skapade jag ett nytt grid för att placera ut bilderna */
  .images{
     grid-area: images;
     display: grid;
@@ -124,29 +126,9 @@ footer a {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
 
-
+  /*här sätter jag ut bilderna i mitt undre grid. */
  }
-.about-us {
-    grid-area: header;
-      padding: 2rem;
-      padding-left: 0;
-  margin: 2rem;
-  margin-left: 0;
- 
-}
-.general-information{
-    grid-area: general;
-    display: block;
-    background-color: #007BFF;  
-    color: white;
-  padding: 2rem;
-  margin: 2rem;
-   margin-top: 0;
-  
-  border-bottom-left-radius: 70px;
-  line-height: 2;
-}
- #students {
+  #students {
     grid-area: image1;
       padding: 1rem;
   border-radius: 35px;
@@ -167,6 +149,30 @@ footer a {
   border-radius: 35px;
 }
 
+/*nya reglar för denna klass*/
+.about-us {
+    grid-area: header;
+      padding: 2rem;
+      padding-left: 0;
+  margin: 2rem;
+  margin-left: 0;
+ 
+}
+/*nya reglar för denna klass*/
+.general-information{
+    grid-area: general;
+    display: block;
+    background-color: #007BFF;  
+    color: white;
+  padding: 2rem;
+  margin: 2rem;
+   margin-top: 0;
+  
+  border-bottom-left-radius: 70px;
+  line-height: 2;
+}
+
+/*nya reglar för denna klass*/
 .specific-information{
    grid-area: specifics;
      padding: 2rem;
@@ -175,7 +181,8 @@ footer a {
   width: 80%;
 
 }}
-
+/*denna media query fångar upp alla med högre upplösning en den angiva. 
+Därmed har vi regler för alla även om inte mobilen är angiven specifikt.*/
 
 @media (min-width: 1024px) {
 .main {
@@ -189,10 +196,12 @@ footer a {
     "specifics specifics"
 
  }
+ /*behlövde återigen justera marginalerna*/
  body {
     margin: 0;
     padding: 0;
  }
+ /*samma här, grid i en grid.*/
 .images {
      grid-area: images;
   display: grid;
@@ -200,7 +209,7 @@ footer a {
   gap: 1rem;
   width: 100%;
 }
-
+/*här sätter jag reglerna för mina bilder */
  .images img{
     width: 50%;
     aspect-ratio: 1/1;
@@ -210,7 +219,7 @@ footer a {
     display: block;
     margin: 0 auto;
  }
-
+/*nya reglar för denna klass*/
 .about-us {
     grid-area: header;
       padding: 3rem;
@@ -221,8 +230,10 @@ footer a {
 
  .about-us h1{
     margin-bottom: 1rem;
+    letter-spacing: -2px;
     
   }
+  /*nya reglar för denna klass*/
 .general-information{
     grid-area: general;
     display: block;
@@ -230,7 +241,7 @@ footer a {
         color: #ffffff;
     text-decoration: none;
     line-height: 1.4;
-    font-size: 0.9em;
+    font-size: 1em;
     font-weight: lighter;
     font-style: normal;
   padding: 2rem 2rem 2rem 5rem;
@@ -239,8 +250,9 @@ footer a {
    border-bottom-left-radius: 70px;
   
 }
-.general-information li, p, div {
-  font-size: 0.9em;
+/*nya regler för denna klass med rubrik och lista*/
+.general-information li {
+  font-size: 1em;
   line-height: 1.4;
   list-style: none;
   margin: 0.5rem 0;
@@ -248,16 +260,18 @@ footer a {
   font-style: normal;
   padding: 1%;
 }
+
 .general-information h2{
     color: #ffffff;
     text-decoration: none;
     margin-bottom: 5%;
     line-height: 1.4;
-    font-size: 0.9em;
+    font-size: 1em;
     font-weight: lighter;
     font-style: normal;
     padding: 1%;
 }
+/*nya regler för denna klass med rubrik och lista*/
 .specific-information{
    grid-area: specifics;
      padding: 4rem;
@@ -265,7 +279,7 @@ footer a {
   margin-left: 0;
   margin-right: 25rem;
 }
-.specific-information li, p, div {
+.specific-information li {
     margin: 0.5rem 0;
     padding: 0%;
      font-size: 0.9em;
