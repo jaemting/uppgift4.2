@@ -8,5 +8,6 @@ Syftet med uppgiften är att:
     Använda CSS Grid och/eller Flexbox layout.
     Använda dynamiska storlekar på element.
     Använda Media Queries.
+    formgivning utdelad i form av skärmdumpar. 
 
     Av Damien Jaemting
