@@ -230,13 +230,39 @@ footer a {
  }
  .images{
     grid-area: images;
-    display: grid;
-    grid-template-areas: 
-    "image1 image2 image3 image4";
+     display: grid;
+    grid-template-areas: "image1 image2 image3 image4";
   grid-template-columns: 1fr 1fr 1fr 1fr;
-
-
+  justify-content: center;
+      width: 100%;
+  
  }
+
+ .images img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 35px;
+ }
+  #students {
+    grid-area: image1;
+    } 
+#meeting {
+    grid-area: image2;
+     
+
+}
+#devices {
+    grid-area: image3;
+    
+
+}
+ #screencode {
+    grid-area: image4;
+      
+ 
+}
 .about-us {
     grid-area: header;
       padding: 3rem;
@@ -292,26 +318,7 @@ footer a {
   margin-left: 0;
 }
 
- #students {
-    grid-area: image1;
-      padding: 1rem;
-  border-radius: 35px;
-} 
-#meeting {
-    grid-area: image2;
-      padding: 1rem;
-  border-radius: 35px;
-}
-#devices {
-    grid-area: image3;
-      padding: 1rem;
-  border-radius: 35px;
-}
- #screencode {
-    grid-area: image4;
-      padding: 1rem;
-  border-radius: 35px;
-}
+
 
 
 
